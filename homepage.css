@@ -1,6 +1,7 @@
 body {
     font-family: 'Rubik', sans-serif;
     height: 100% !important;
+    
     background-color: #3F51B5 !important
 }
 
@@ -104,3 +105,79 @@ img {
     text-decoration:none;
     }
 
+
+/* Like button */
+
+b
+  
+  i {
+    cursor:pointer;
+    padding:10px 12px 8px;
+    background:#fff;
+    border-radius:50%;
+    display:inline-block;
+    margin:0 0 15px;
+    color:#aaa;
+    transition:.2s;
+  }
+  
+  i:hover {
+    color:#666;
+  }
+  
+  i:before {
+    font-family:fontawesome;
+    content:'\f004';
+    font-style:normal;
+  }
+  
+  span {
+    position: absolute;
+    bottom:70px;
+    left:0;
+    right:0;
+    visibility: hidden;
+    transition:.6s;
+    z-index:-2;
+    font-size:2px;
+    color:transparent;
+    font-weight:400;
+  }
+  
+  i.press {
+    animation: size .4s;
+    color:#e23b3b;
+  }
+  
+  span.press {
+    bottom:120px;
+    font-size:14px;
+    visibility:visible;
+    animation: fade 1s;
+  }
+  
+  /* DEMO-SPECIFIC STYLES */
+  .typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
